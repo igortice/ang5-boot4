@@ -1,5 +1,58 @@
-<app-layout-container></app-layout-container>
+<button class="btn btn-lg btn-primary btn-block" type="submit" (click)='showLayout()'>{{ viewLayout[currentIndex] }}
+                                                                                      layout
+</button>
 
-<app-layout-main></app-layout-main>
+<div class='container pt-5' [hidden]='currentIndex'>
+  <div class='row'>
+    <form class="col-12">
+      <div class="form-label-group">
+        <input type="text" id="inputName" class="form-control" placeholder="Name address" required="" autofocus="">
+        <label for="inputName">Name</label>
+      </div>
+      <div class="form-label-group">
+        <input type="text" id="inputContent" class="form-control" placeholder="Content address" required="" autofocus="">
+        <label for="inputContent">Content</label>
+      </div>
 
-<app-layout-footer></app-layout-footer>
+      <div class='row'>
+        <div class='col-6'>
+          <button class="btn btn-lg btn-secondary btn-block" type="submit">add image</button>
+        </div>
+        <div class='col-6'>
+          <button class="btn btn-lg btn-danger btn-block" type="submit">add container</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <hr>
+
+  <div class='row'>
+    <div class='col-12'>
+      <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between">
+          <div>
+            <h6 class="my-0">Product name</h6>
+            <small class="text-muted">Brief description</small>
+          </div>
+          <span class="col-2"><span class="badge btn-secondary btn-block">image</span></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <div>
+            <h6 class="my-0">Product name</h6>
+            <small class="text-muted">Brief description</small>
+          </div>
+          <span class="col-2"><span class="badge btn-danger btn-block">container</span></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<span [hidden]='!currentIndex'>
+  <app-layout-container></app-layout-container>
+
+  <app-layout-main></app-layout-main>
+
+  <app-layout-footer></app-layout-footer>
+</span>

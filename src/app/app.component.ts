@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls:   [ './app.component.scss' ]
 })
 export class AppComponent {
-  title = 'app';
+  viewLayout   = [ 'show', 'hidden' ];
+  currentIndex = 0;
+
+  showLayout(): void {
+    this.currentIndex === 0 ? this.currentIndex = 1 : this.currentIndex = 0;
+  }
 }
