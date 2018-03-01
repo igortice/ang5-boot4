@@ -1,3 +1,33 @@
-<p>
-  component-form works!
-</p>
+
+<div class='row'>
+  <div class='col-12'>
+    <div class='form-label-group'>
+      <input type='text' id='inputName' class='form-control'
+             placeholder='Server Name' required='' autofocus=''
+             [(ngModel)]='myServerChild.name'>
+      <label for='inputName'>Server Name</label>
+    </div>
+
+    <div class='form-label-group'>
+      <input type='text' id='inputContent' class='form-control'
+             placeholder='Content Server' required='' autofocus=''
+             [(ngModel)]='myServerChild.content'>
+      <label for='inputContent'>Content Server</label>
+    </div>
+
+    <div class='row'>
+      <div class='col-6'>
+        <button class='btn btn-lg btn-primary btn-block'
+                type='submit'
+                (click)='addServer("primary")'>server blue
+        </button>
+      </div>
+      <div class='col-6'>
+        <button class='btn btn-lg btn-danger btn-block'
+                type='submit'
+                (click)='addServer("danger")'>server red
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

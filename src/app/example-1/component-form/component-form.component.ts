@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MyServer } from '../interface/my-server';
 
 @Component({
   selector:    'app-example-1-component-form',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls:   [ './component-form.component.scss' ]
 })
 export class ComponentFormComponent implements OnInit {
+  @Input() myServerChild: MyServer;
+  @Output() onAddServerChild = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  addServer(type: string) {
+    this.onAddServerChild.emit(type);
+  }
 }

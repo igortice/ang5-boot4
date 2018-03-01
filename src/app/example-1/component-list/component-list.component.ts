@@ -7,7 +7,7 @@ import { MyServer } from '../interface/my-server';
   styleUrls:   [ './component-list.component.scss' ]
 })
 export class ComponentListComponent implements OnInit {
-  @Input('serverChildElements') serverElements: MyServer[];
+  @Input() serverChildElements: MyServer[];
 
   constructor() { }
 

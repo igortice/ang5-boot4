@@ -3,7 +3,7 @@
     <ul class='list-group mb-3'>
       <li
         class='list-group-item d-flex justify-content-between'
-        *ngFor='let server of serverElements'>
+        *ngFor='let server of serverChildElements.reverse()'>
         <div>
           <h6 class='my-0'>{{ server.name }}</h6>
           <small class='text-muted'>{{ server.content }}</small>

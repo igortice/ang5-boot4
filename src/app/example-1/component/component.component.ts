@@ -9,7 +9,7 @@ import { MyServer } from '../interface/my-server';
 })
 export class ComponentComponent implements OnInit {
   serverParentElements: MyServer[] = [];
-  myServer: MyServer;
+  myServerParent: MyServer;
 
   constructor() {
     this.setMyServerNull();
@@ -24,14 +24,14 @@ export class ComponentComponent implements OnInit {
   ngOnInit() {
   }
 
-  addServer(type: string) {
-    this.myServer.type = type;
-    this.serverParentElements.push(this.myServer);
+  addServerParent(type: string) {
+    this.myServerParent.type = type;
+    this.serverParentElements.push(this.myServerParent);
     this.setMyServerNull();
   }
 
   private setMyServerNull(): void {
-    this.myServer = {
+    this.myServerParent = {
       name:    '',
       content: '',
       type:    ''
