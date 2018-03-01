@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ContainerComponent } from './layout/container/container.component';
 import { MainComponent } from './layout/main/main.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { ComponentComponent } from './example-1/component/component.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,10 +15,12 @@ import { FooterComponent } from './layout/footer/footer.component';
     AppComponent,
     ContainerComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    ComponentComponent
   ],
   imports:      [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers:    [],
   bootstrap:    [ AppComponent ]
