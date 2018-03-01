@@ -8,6 +8,8 @@ import { MainComponent } from './layout/main/main.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { ComponentComponent } from './example-1/component/component.component';
 import { FormsModule } from '@angular/forms';
+import { ComponentFormComponent } from './example-1/component-form/component-form.component';
+import { ComponentListComponent } from './example-1/component-list/component-list.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { FormsModule } from '@angular/forms';
     ContainerComponent,
     MainComponent,
     FooterComponent,
-    ComponentComponent
+    ComponentComponent,
+    ComponentFormComponent,
+    ComponentListComponent
   ],
   imports:      [
     BrowserModule,

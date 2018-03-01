@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MyServer } from '../interface/my-server';
 
-interface MyServer {
-  name: string;
-  content: string;
-  type: string;
-}
 
 @Component({
   selector:    'app-example-1-component',
@@ -12,13 +8,13 @@ interface MyServer {
   styleUrls:   [ './component.component.scss' ]
 })
 export class ComponentComponent implements OnInit {
-  serverElements: MyServer[] = [];
+  serverParentElements: MyServer[] = [];
   myServer: MyServer;
 
   constructor() {
     this.setMyServerNull();
 
-    this.serverElements.push({
+    this.serverParentElements.push({
       name:    'Product name 1',
       content: 'description 1',
       type:    'primary'
@@ -30,7 +26,7 @@ export class ComponentComponent implements OnInit {
 
   addServer(type: string) {
     this.myServer.type = type;
-    this.serverElements.push(this.myServer);
+    this.serverParentElements.push(this.myServer);
     this.setMyServerNull();
   }
 
