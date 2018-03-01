@@ -1,10 +1,11 @@
 <div class='container pt-5'>
   <app-example-1-component-form
     [myServerChild]='myServerParent'
-    (onAddServerChild)='addServerParent($event)'></app-example-1-component-form>
+    (onAddServerChild)='addServerParent($event)' (onUpdateServerChild)='updateServerParent()'></app-example-1-component-form>
 
   <hr>
 
   <app-example-1-component-list
-    [serverChildElements]='serverParentElements'></app-example-1-component-list>
+    [serverChildElements]='serverParentElements'
+    (onServerSelected)='serverSelected($event)'></app-example-1-component-list>
 </div>

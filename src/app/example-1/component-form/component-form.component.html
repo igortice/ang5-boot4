@@ -15,7 +15,7 @@
       <label for='inputContent'>Content Server</label>
     </div>
 
-    <div class='row'>
+    <div class='row' *ngIf='!myServerChild.type; else editServer'>
       <div class='col-6'>
         <button class='btn btn-lg btn-primary btn-block'
                 type='submit'
@@ -29,5 +29,21 @@
         </button>
       </div>
     </div>
+    <ng-template #editServer>
+      <div class='row'>
+        <div class='col-12'>
+          <select class="custom-select d-block w-100" id="server" [(ngModel)]='myServerChild.type'>
+            <option *ngFor="let ser of ['primary', 'danger']" [ngValue]="ser">
+              {{ser}}
+            </option>
+          </select>
+        </div>
+        <div class='col-12 my-3'>
+          <button class='btn btn-lg btn-success btn-block'
+                  (click)='updateServer()'>save
+          </button>
+        </div>
+      </div>
+    </ng-template>
   </div>
 </div>

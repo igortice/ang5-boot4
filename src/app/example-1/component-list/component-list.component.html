@@ -8,7 +8,11 @@
           <h6 class='my-0'>{{ server.name }}</h6>
           <small class='text-muted'>{{ server.content }}</small>
         </div>
-        <span class='col-2'><span class='badge btn-{{ server.type }} btn-block'>{{ server.type }}</span></span>
+        <span class='col-2 text-center'>
+          <span class='badge btn-{{ server.type }} btn-block'>{{ server.type }}</span>
+          <i class='fa fa-pencil' (click)='editServer(server)'></i>
+          <i class='fa fa-trash' (click)='removeServer()'></i>
+        </span>
       </li>
     </ul>
   </div>

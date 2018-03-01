@@ -9,6 +9,7 @@ import { MyServer } from '../interface/my-server';
 export class ComponentFormComponent implements OnInit {
   @Input() myServerChild: MyServer;
   @Output() onAddServerChild = new EventEmitter<string>();
+  @Output() onUpdateServerChild = new EventEmitter();
 
   constructor() { }
 
@@ -17,5 +18,9 @@ export class ComponentFormComponent implements OnInit {
 
   addServer(type: string) {
     this.onAddServerChild.emit(type);
+  }
+
+  updateServer() {
+    this.onUpdateServerChild.emit();
   }
 }

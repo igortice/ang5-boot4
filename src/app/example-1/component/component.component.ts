@@ -17,7 +17,7 @@ export class ComponentComponent implements OnInit {
     this.serverParentElements.push({
       name:    'Product name 1',
       content: 'description 1',
-      type:    'primary'
+      type:    'danger'
     });
   }
 
@@ -28,6 +28,14 @@ export class ComponentComponent implements OnInit {
     this.myServerParent.type = type;
     this.serverParentElements.push(this.myServerParent);
     this.setMyServerNull();
+  }
+
+  updateServerParent() {
+    this.setMyServerNull();
+  }
+
+  serverSelected(server: MyServer) {
+    this.myServerParent = server;
   }
 
   private setMyServerNull(): void {

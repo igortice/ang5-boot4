@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MyServer } from '../interface/my-server';
 
 @Component({
@@ -8,10 +8,17 @@ import { MyServer } from '../interface/my-server';
 })
 export class ComponentListComponent implements OnInit {
   @Input() serverChildElements: MyServer[];
+  @Output() onServerSelected = new EventEmitter<MyServer>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  editServer(server: MyServer) {
+    this.onServerSelected.emit(server);
+  }
+
+  removeServer() {
+  }
 }
