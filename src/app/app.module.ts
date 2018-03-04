@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { ComponentFormComponent } from './example-1/component-form/component-form.component';
 import { ComponentListComponent } from './example-1/component-list/component-list.component';
 import { UsersComponent } from './example-2/users/users.component';
+import { ActiveUsersComponent } from './example-2/active-users/active-users/active-users.component';
+import { InactiveUsersComponent } from './example-2/inactive-users/inactive-users/inactive-users.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { UsersComponent } from './example-2/users/users.component';
     ComponentComponent,
     ComponentFormComponent,
     ComponentListComponent,
-    UsersComponent
+    UsersComponent,
+    ActiveUsersComponent,
+    InactiveUsersComponent
   ],
   imports:      [
     BrowserModule,
