@@ -10,6 +10,7 @@ import { ComponentComponent } from './example-1/component/component.component';
 import { FormsModule } from '@angular/forms';
 import { ComponentFormComponent } from './example-1/component-form/component-form.component';
 import { ComponentListComponent } from './example-1/component-list/component-list.component';
+import { UsersComponent } from './example-2/users/users.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ComponentListComponent } from './example-1/component-list/component-lis
     FooterComponent,
     ComponentComponent,
     ComponentFormComponent,
-    ComponentListComponent
+    ComponentListComponent,
+    UsersComponent
   ],
   imports:      [
     BrowserModule,

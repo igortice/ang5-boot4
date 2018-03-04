@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls:   [ './app.component.scss' ]
 })
 export class AppComponent {
-  example = 0;
+  examples        = [ 'layout', 'example 1', 'example 2' ];
+  exampleSelected = 0;
 }

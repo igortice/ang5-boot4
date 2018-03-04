@@ -1,11 +1,13 @@
 <div class='container'>
-  <button class='btn btn-sm btn-secondary' (click)='example=0'>layout</button>
-  <button class='btn btn-sm btn-secondary' (click)='example=1'>example 1</button>
-  <button class='btn btn-sm btn-secondary' (click)='example=2'>example 2</button>
+  <button class='btn btn-sm btn-secondary mr-1'
+          *ngFor='let example of examples; let id = index'
+          (click)='exampleSelected=id'>{{ example }}</button>
+  <hr>
+  <h5 class='bg-info py-2 text-center text-white'>selected: {{ examples[exampleSelected] }}</h5>
   <hr>
 </div>
 
-<span [ngSwitch]='example'>
+<span [ngSwitch]='exampleSelected'>
   <span *ngSwitchCase='0'>
     <app-layout-container></app-layout-container>
 
@@ -19,6 +21,6 @@
   </span>
 
   <span *ngSwitchCase='2'>
-    <app-example-1-component></app-example-1-component>
+    <app-example-2-users></app-example-2-users>
   </span>
 </span>
