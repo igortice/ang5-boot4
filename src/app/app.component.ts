@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   examples        = [ 'layout', 'example 1', 'example 2' ];
-  exampleSelected = 0;
+  exampleSelected = 2;
 }
