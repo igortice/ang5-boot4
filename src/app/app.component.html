@@ -1,16 +1,24 @@
-<button class='btn btn-lg btn-primary btn-block' type='submit' (click)='showLayout()'>{{ viewLayout[currentIndex] }}
-                                                                                      layout
-</button>
+<div class='container'>
+  <button class='btn btn-sm btn-secondary' (click)='example=0'>layout</button>
+  <button class='btn btn-sm btn-secondary' (click)='example=1'>example 1</button>
+  <button class='btn btn-sm btn-secondary' (click)='example=2'>example 2</button>
+  <hr>
+</div>
 
-<span [hidden]='currentIndex'>
-  <app-example-1-component></app-example-1-component>
-</span>
+<span [ngSwitch]='example'>
+  <span *ngSwitchCase='0'>
+    <app-layout-container></app-layout-container>
 
+    <app-layout-main></app-layout-main>
 
-<span [hidden]='!currentIndex'>
-  <app-layout-container></app-layout-container>
+    <app-layout-footer></app-layout-footer>
+  </span>
 
-  <app-layout-main></app-layout-main>
+  <span *ngSwitchCase='1'>
+    <app-example-1-component></app-example-1-component>
+  </span>
 
-  <app-layout-footer></app-layout-footer>
+  <span *ngSwitchCase='2'>
+    <app-example-1-component></app-example-1-component>
+  </span>
 </span>
